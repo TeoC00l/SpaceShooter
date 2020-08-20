@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class DeathZone : MonoBehaviour
+public class DeathZoneCheck : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
