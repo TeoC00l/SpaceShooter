@@ -25,7 +25,7 @@ public class ChunkManager : MonoBehaviour
     {
         GameObject chunk = Instantiate(chunks[Random.Range(0, chunks.Length)]);
 
-        if(activeChunks.Count == 0)
+        if(lastChunk == null)
         {
             chunk.transform.position = startPosition;
         }
@@ -46,7 +46,7 @@ public class ChunkManager : MonoBehaviour
 
     public Vector3 calculateSpawnPoint()
     {
-        Vector3 offset = lastChunk.transform.right * (lastChunk.transform.localScale.x);
+        Vector3 offset = lastChunk.transform.right * lastChunk.transform.localScale.x;
         Vector3 pos = lastChunk.transform.position + offset;
 
         return pos;
