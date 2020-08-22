@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 4254030172818559945}
   - component: {fileID: 4254030172818559948}
   - component: {fileID: 4254030172108149484}
+  - component: {fileID: 1885754478444217226}
   m_Layer: 0
   m_Name: PlayerHeli
   m_TagString: Player
@@ -133,9 +134,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.03409621, y: 0.014076978}
   serializedVersion: 2
-  m_Radius: 0.27
+  m_Radius: 0.37874392
 --- !u!50 &4254030172818559944
 Rigidbody2D:
   serializedVersion: 4
@@ -200,6 +201,57 @@ MonoBehaviour:
   fireRate: 0.3
   gun: {fileID: 11400000, guid: b3927834a851e9b4db003fea974eeb48, type: 2}
   gunOffset: {x: 0.72, y: 0}
+--- !u!212 &1885754478444217226
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254030172818559949}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &4254030173624070489
 GameObject:
   m_ObjectHideFlags: 0
@@ -5076,6 +5128,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3315284247089479798, guid: 2427c306e0f15114e971b76938c8ea93, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4222943507026507124, guid: 2427c306e0f15114e971b76938c8ea93, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4351182500482170002, guid: 2427c306e0f15114e971b76938c8ea93, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5091,6 +5151,18 @@ PrefabInstance:
     - target: {fileID: 4351182500991726630, guid: 2427c306e0f15114e971b76938c8ea93, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351182500991726631, guid: 2427c306e0f15114e971b76938c8ea93, type: 3}
+      propertyPath: m_SelectedFaces.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351182500991726631, guid: 2427c306e0f15114e971b76938c8ea93, type: 3}
+      propertyPath: m_SelectedEdges.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351182500991726631, guid: 2427c306e0f15114e971b76938c8ea93, type: 3}
+      propertyPath: m_SelectedVertices.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4351182501166535648, guid: 2427c306e0f15114e971b76938c8ea93, type: 3}
       propertyPath: m_Mesh
@@ -5151,6 +5223,14 @@ PrefabInstance:
     - target: {fileID: 4351182501425426925, guid: 2427c306e0f15114e971b76938c8ea93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847354591626731267, guid: 2427c306e0f15114e971b76938c8ea93, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809033638152337338, guid: 2427c306e0f15114e971b76938c8ea93, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2427c306e0f15114e971b76938c8ea93, type: 3}
