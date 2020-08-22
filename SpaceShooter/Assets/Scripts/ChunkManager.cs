@@ -70,7 +70,7 @@ public class ChunkManager : MonoBehaviour
             if (Random.Range(0, 100) < nodeSpawnPercentChance)
             {
                 GameObject spawned = Instantiate(spawnObjects[Random.Range(0, spawnObjects.Length)], nodes[i].transform.position, Quaternion.identity);
-                spawned.transform.parent = lastChunk.transform;
+                spawned.transform.parent = nodes[i].transform;
             }
         }
     }

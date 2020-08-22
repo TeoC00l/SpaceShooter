@@ -7,7 +7,7 @@ public class DeathZoneCheck : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Object.Destroy(other.gameObject);
-            Debug.Log("Killed outer bound");
+            Debug.Log("Killed!");
         }
     }
 }
