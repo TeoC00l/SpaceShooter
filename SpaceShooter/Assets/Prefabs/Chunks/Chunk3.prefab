@@ -64,6 +64,7 @@ Transform:
   m_Children:
   - {fileID: 3278669254380726338}
   - {fileID: 8061818368373937666}
+  - {fileID: 8312141930013552210}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4745,6 +4746,157 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &8305170990044350547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5933586429951074425}
+  - component: {fileID: 6186364441746850006}
+  - component: {fileID: 5264186373360077037}
+  m_Layer: 0
+  m_Name: DeathZone2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5933586429951074425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8305170990044350547}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: -6.177983, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8312141930013552210}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!68 &6186364441746850006
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8305170990044350547}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -15.776947, y: 2.9418454}
+  - {x: -9.626238, y: 1.7413102}
+  - {x: 5.7117224, y: 2.841352}
+  - {x: 5.71916, y: 0.35124373}
+  - {x: 8.0223675, y: -0.9179299}
+  - {x: 12.110568, y: -0.9308655}
+  - {x: 13.940338, y: 0.21668053}
+  - {x: 15.142514, y: 2.935}
+  - {x: 24.984509, y: 1.9938474}
+  - {x: 32.790104, y: 2.7828922}
+  - {x: 33.00972, y: 2.7582736}
+  - {x: 34.164505, y: 3.019284}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &5264186373360077037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8305170990044350547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0e26011c0d2954d857c003b9d9d3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8694963367916710049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6930069152273854476}
+  - component: {fileID: 4792204344282010972}
+  - component: {fileID: 3128946499921266915}
+  m_Layer: 0
+  m_Name: DeathZone1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6930069152273854476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8694963367916710049}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8312141930013552210}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &4792204344282010972
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8694963367916710049}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -15.776947, y: 2.9418454}
+  - {x: -9.626238, y: 1.7413102}
+  - {x: -3.7331467, y: -3.713286}
+  - {x: 0.81608677, y: -3.2615495}
+  - {x: 5.751469, y: 1.8174708}
+  - {x: 14.949187, y: 2.9399831}
+  - {x: 19.942368, y: -5.0131426}
+  - {x: 24.984509, y: -5.076903}
+  - {x: 25.9258, y: -4.287858}
+  - {x: 29.396925, y: -4.9834237}
+  - {x: 34.42256, y: 3.2773397}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &3128946499921266915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8694963367916710049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0e26011c0d2954d857c003b9d9d3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8789059718017737147
 GameObject:
   m_ObjectHideFlags: 0
@@ -4776,6 +4928,38 @@ Transform:
   - {fileID: 5477688533801315079}
   m_Father: {fileID: 3386790109898674351}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9097075423228972202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8312141930013552210}
+  m_Layer: 0
+  m_Name: DeathZones
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8312141930013552210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9097075423228972202}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.1836655, y: 0.22699873, z: -5.399064}
+  m_LocalScale: {x: 0.02, y: 0.07142857, z: 1}
+  m_Children:
+  - {fileID: 6930069152273854476}
+  - {fileID: 5933586429951074425}
+  m_Father: {fileID: 3386790109898674351}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3424167396374973906
 PrefabInstance:
@@ -4834,14 +5018,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5909f631f91dff545955b8554909813b, type: 3}
---- !u!1 &7678722225929214738 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4977985244927874752, guid: 5909f631f91dff545955b8554909813b, type: 3}
-  m_PrefabInstance: {fileID: 3424167396374973906}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5477688533801315079 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7170221718820267733, guid: 5909f631f91dff545955b8554909813b, type: 3}
+  m_PrefabInstance: {fileID: 3424167396374973906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7678722225929214738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4977985244927874752, guid: 5909f631f91dff545955b8554909813b, type: 3}
   m_PrefabInstance: {fileID: 3424167396374973906}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6550611941436960043
@@ -4901,13 +5085,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5909f631f91dff545955b8554909813b, type: 3}
---- !u!1 &2305044686660172779 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4977985244927874752, guid: 5909f631f91dff545955b8554909813b, type: 3}
-  m_PrefabInstance: {fileID: 6550611941436960043}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4137062528248876030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7170221718820267733, guid: 5909f631f91dff545955b8554909813b, type: 3}
+  m_PrefabInstance: {fileID: 6550611941436960043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2305044686660172779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4977985244927874752, guid: 5909f631f91dff545955b8554909813b, type: 3}
   m_PrefabInstance: {fileID: 6550611941436960043}
   m_PrefabAsset: {fileID: 0}
