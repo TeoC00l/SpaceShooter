@@ -3,7 +3,7 @@
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public float score;
+    public int score;
     public GameObject player;
     private ChunkManager chunkManager;
 
@@ -23,12 +23,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score += 0.1f;
+        score += 1;
 
-        if(score % 100 == 0)
+        if(score % 10000 == 0)
         {
-            chunkManager.ChunkSpeed += 1;
             Debug.Log("Going faster!");
+            chunkManager.ChunkSpeed += 1;
         }
     }
 }
