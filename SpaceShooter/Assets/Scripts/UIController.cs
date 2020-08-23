@@ -23,6 +23,9 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private float HeliAccel = 1.005f;
 
+    [SerializeField]
+    private string sceneToLoad = "Main";
+
     [SerializeField] 
     private float timeBeforeGameStart = 1f;
 
@@ -70,6 +73,6 @@ public class UIController : MonoBehaviour
     private IEnumerator StartGameDelayed()
     {
         yield return waitTime;
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene(sceneToLoad);
     }
 }

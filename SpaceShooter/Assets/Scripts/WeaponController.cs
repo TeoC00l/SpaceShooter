@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 
 public class WeaponController : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class WeaponController : MonoBehaviour
     public ShipGunBase gun;
     [SerializeField]
     private Vector2 gunOffset;
+
+    [SerializeField]
+    private AudioSource audioSource;
+    
     
     private void Update()
     {
@@ -21,6 +26,7 @@ public class WeaponController : MonoBehaviour
         {
             if (fireRateTimer >= fireRate)
             {
+                audioSource.Play();
                 fireRateTimer = 0;
                 gun.Fire((Vector2)transform.position + gunOffset);
             }
