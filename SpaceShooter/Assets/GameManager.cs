@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     {
         score += 1;
 
-        if(score % 10000 == 0)
+        if(score % 20000 == 0)
         {
             Debug.Log("Going faster!");
             chunkManager.ChunkSpeed += 1;
