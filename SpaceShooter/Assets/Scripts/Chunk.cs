@@ -4,10 +4,10 @@ public class Chunk : MonoBehaviour
 {
     private ChunkManager chunkManager;
     private float horizontalDestroyCoordinate = -50f;
+    [SerializeField] public GameObject[] nodes;
 
     void Awake()
     {
-        //transform.position = startPosition;
     }
 
     void Start()

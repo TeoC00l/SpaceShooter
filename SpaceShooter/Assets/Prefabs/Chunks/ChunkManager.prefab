@@ -43,7 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ffb8e0b5409585449c4b76470423be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chunkSpeed: 10
   chunks:
-  - {fileID: 6198180770795503464, guid: 254808eba6935a945a744c4797b925fa, type: 3}
-  - {fileID: 6442307618187816763, guid: f74e824f2c559754d84cce20b9ce8dcf, type: 3}
-  - {fileID: 6442307618187816763, guid: 4f988d322a6d331449d8f0d361473417, type: 3}
+  - {fileID: 571677932059705346, guid: 254808eba6935a945a744c4797b925fa, type: 3}
+  - {fileID: 4147426214677720800, guid: a13d3476f75d89743ab7846779e023c3, type: 3}
+  - {fileID: 3386790109898674355, guid: 3121cd165da594a4885474ac9b5a9abd, type: 3}
+  spawnObjects:
+  - {fileID: 7240452381498263386, guid: 5da5bd1e60f58184583da95bdbcf696d, type: 3}
