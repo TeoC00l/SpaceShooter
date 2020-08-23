@@ -21,7 +21,13 @@ public class Enemy : MonoBehaviour
     }
 
     private void Awake()
+    {        
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
     {
+        target = GameManager.instance.player;
         rb = GetComponent<Rigidbody2D>();
     }
 

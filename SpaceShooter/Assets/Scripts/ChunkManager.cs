@@ -28,7 +28,6 @@ public class ChunkManager : MonoBehaviour
 
     public void CreateNewChunk()
     {
-        Debug.Log("object spawned");
         GameObject chunk = Instantiate(chunks[Random.Range(0, chunks.Length)]);
 
         if(lastChunk == null)

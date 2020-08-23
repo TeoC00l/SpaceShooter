@@ -6,10 +6,6 @@ public class Chunk : MonoBehaviour
     private float horizontalDestroyCoordinate = -50f;
     [SerializeField] public GameObject[] nodes;
 
-    void Awake()
-    {
-    }
-
     void Start()
     {
         chunkManager = FindObjectOfType<ChunkManager>();

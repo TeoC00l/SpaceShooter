@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DeathZone
   - Damageable
+  - Pickup
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,7 @@ TagManager:
   - 
   - Enemy
   - ChunkManager
-  - 
-  - 
+  - Player
   - 
   - 
   - 

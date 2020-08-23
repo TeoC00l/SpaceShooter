@@ -171,7 +171,7 @@ MonoBehaviour:
   collisionDist: 0
   colideLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1024
 --- !u!114 &5533256761291415596
 MonoBehaviour:
   m_ObjectHideFlags: 0

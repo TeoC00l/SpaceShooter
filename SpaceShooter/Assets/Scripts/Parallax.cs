@@ -14,16 +14,16 @@ public class Parallax : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.x < -size)
+        if(transform.position.x < -size *2)
         {
             Destroy(gameObject);
         }
+
         transform.position += Vector3.left * parallaxEffect * Time.deltaTime;
 
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("poop");
         if (other.CompareTag("MainCamera"))
         {
             Vector3 offset = transform.right * (size - 0.01f);
