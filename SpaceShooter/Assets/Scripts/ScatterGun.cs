@@ -1,26 +1,29 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "Weapon/ScatterGun", fileName = "ScatterGun")]
-public class ScatterGun : ShipGunBase
+namespace SpaceShooter
 {
-    [SerializeField]
-    private int numberOfProjectiles = 3;
-    [SerializeField]
-    private float spreadAmount = 10;
-    
-    public override void Fire(Vector2 pos)
+    [CreateAssetMenu(menuName = "Weapon/ScatterGun", fileName = "ScatterGun")]
+    public class ScatterGun : ShipGunBase
     {
-        for (int i = 0; i < numberOfProjectiles; i++)
+        [SerializeField] private int numberOfProjectiles = 3;
+        [SerializeField] private float spreadAmount = 10;
+
+        public override void Fire(Vector2 pos)
         {
-            Vector2 rotatedVector = Quaternion.AngleAxis((-spreadAmount * numberOfProjectiles / 2) + spreadAmount * i, Vector3.forward) * Vector2.right;
-            
-            Bullet bullet = ObjectPooler.instance.GetPooledObject();
-        
-            if (!bullet) return;
-        
-            bullet.gameObject.SetActive(true);
-            bullet.transform.position = pos;
-            bullet.Init(velocity, lifeTime, rotatedVector);
+            for (int i = 0; i < numberOfProjectiles; i++)
+            {
+                Vector2 rotatedVector =
+                    Quaternion.AngleAxis((-spreadAmount * numberOfProjectiles / 2) + spreadAmount * i,
+                        Vector3.forward) * Vector2.right;
+
+                Bullet bullet = ObjectPooler.instance.GetPooledObject();
+
+                if (!bullet) return;
+
+                bullet.gameObject.SetActive(true);
+                bullet.transform.position = pos;
+                bullet.Init(velocity, lifeTime, rotatedVector);
+            }
         }
     }
 }

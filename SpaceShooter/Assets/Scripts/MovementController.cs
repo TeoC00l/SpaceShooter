@@ -18,6 +18,9 @@ public class MovementController : MonoBehaviour
     public float horizontalBoost;
     [SerializeField]
     private ParticleSystem thrustParticleSystem;
+
+    [SerializeField]
+    private float tiltModefier = 20;
     
     private void Awake()
     {
@@ -36,6 +39,11 @@ public class MovementController : MonoBehaviour
             thrustParticleSystem.Emit(1);
             rb.AddForce(Vector2.up * (verticalForce * Time.fixedDeltaTime));
         }
+
+        float tilt = rb.velocity.x * tiltModefier  + 10f;
+
+        
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, -tilt));
 
         if (horizontalBoost != 0)
         {

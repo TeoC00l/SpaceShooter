@@ -1,38 +1,44 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class ObjectPooler : MonoBehaviour
+namespace SpaceShooter
 {
-    public static ObjectPooler instance;
 
-    public GameObject objectToPool;
-    public List<Bullet> pooledObjects = new List<Bullet>();
-    public int amountToPool;
 
-    private void Awake()
+    public class ObjectPooler : MonoBehaviour
     {
-        instance = this;
-    }
+        public static ObjectPooler instance;
 
-    private void Start()
-    {
-        for (int i = 0; i < amountToPool; i++)
+        public GameObject objectToPool;
+        public List<Bullet> pooledObjects = new List<Bullet>();
+        public int amountToPool;
+
+        private void Awake()
         {
-            GameObject obj = Instantiate(objectToPool, transform);
-            obj.SetActive(false);
-            pooledObjects.Add(obj.GetComponent<Bullet>());
+            instance = this;
         }
-    }
 
-    public Bullet GetPooledObject()
-    {
-        for (int i = 0; i < pooledObjects.Count; i++)
+        private void Start()
         {
-            if (!pooledObjects[i].gameObject.activeInHierarchy)
+            for (int i = 0; i < amountToPool; i++)
             {
-                return pooledObjects[i];
+                GameObject obj = Instantiate(objectToPool, transform);
+                obj.SetActive(false);
+                pooledObjects.Add(obj.GetComponent<Bullet>());
             }
         }
-        return null;
+
+        public Bullet GetPooledObject()
+        {
+            for (int i = 0; i < pooledObjects.Count; i++)
+            {
+                if (!pooledObjects[i].gameObject.activeInHierarchy)
+                {
+                    return pooledObjects[i];
+                }
+            }
+
+            return null;
+        }
     }
 }

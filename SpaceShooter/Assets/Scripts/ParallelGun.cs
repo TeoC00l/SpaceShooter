@@ -1,26 +1,31 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "Weapon/ParallelGun", fileName = "ParallelGun")]
-
-public class ParallelGun : ShipGunBase
+namespace SpaceShooter
 {
-    [SerializeField]
-    private int numberOfProjectiles = 3;
-    [SerializeField]
-    private float offsetAmount = 10;
-    
-    public override void Fire(Vector2 pos)
+    [CreateAssetMenu(menuName = "Weapon/ParallelGun", fileName = "ParallelGun")]
+    public class ParallelGun : ShipGunBase
     {
-        for (int i = 0; i < numberOfProjectiles; i++)
+        [SerializeField]
+        private int numberOfProjectiles = 3;
+        [SerializeField]
+        private float offsetAmount = 10;
+    
+        public override void Fire(Vector2 pos)
         {
-            Vector2 offsetVector = new Vector2(0, -((numberOfProjectiles - 1) * offsetAmount / 2) + offsetAmount * i);
+            for (int i = 0; i < numberOfProjectiles; i++)
+            {
+                Vector2 offsetVector = new Vector2(0, -((numberOfProjectiles - 1) * offsetAmount / 2) + offsetAmount * i);
                 
-            Bullet bullet = ObjectPooler.instance.GetPooledObject();
+                    Bullet bullet = ObjectPooler.instance.GetPooledObject();
         
-            if (!bullet) return;
+                if (!bullet) return;
         
-            bullet.gameObject.SetActive(true);
-            bullet.transform.position = pos + offsetVector;
-            bullet.Init(velocity, lifeTime);
+                bullet.gameObject.SetActive(true);
+                bullet.transform.position = pos + offsetVector;
+                bullet.Init(velocity, lifeTime);
+            }
         }
-    }}
+        
+    }
+
+}
