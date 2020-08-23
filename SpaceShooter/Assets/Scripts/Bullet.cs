@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -8,10 +9,21 @@ public class Bullet : MonoBehaviour
     private float bulletLife;
     private float lifeTimer;
 
-    public void Init(float velocity, float life)
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+    
+    public void Init(float velocity, float life)
+    {
         rb.velocity = Vector2.right * velocity;
+        bulletLife = life;
+        lifeTimer = 0;
+    }
+    
+    public void Init(float velocity, float life, Vector2 dir)
+    {
+        rb.velocity = dir * velocity;
         bulletLife = life;
         lifeTimer = 0;
     }
@@ -27,6 +39,11 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Destroy(other.gameObject);
+
+        if (other.gameObject.CompareTag("Damageable"))
+        {
+            other.gameObject.GetComponent<Damageable>().Damage(1);
+        }
+        gameObject.SetActive(false);
     }
 }

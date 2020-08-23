@@ -94,9 +94,10 @@ GameObject:
   - component: {fileID: 1984158676465968262}
   - component: {fileID: 1984158676465968263}
   - component: {fileID: 1984158676465968260}
+  - component: {fileID: 5533256761291415596}
   m_Layer: 8
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Damageable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +137,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &1984158676465968263
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -165,9 +166,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894d46d2beda87646aa46112eea82610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 4
+  moveForce: 14
   target: {fileID: 0}
-  otherEnemies: []
+  collisionDist: 0
   colideLayer:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5533256761291415596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984158676465968261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c41924f904c0743884cda75a377a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 3

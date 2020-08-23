@@ -7,12 +7,12 @@ public class BasicShipGun : ShipGunBase
 {
     public override void Fire(Vector2 pos)
     {
-        GameObject bullet = ObjectPooler.instance.GetPooledObject();
+        Bullet bullet = ObjectPooler.instance.GetPooledObject();
         
         if (!bullet) return;
         
-        bullet.SetActive(true);
+        bullet.gameObject.SetActive(true);
         bullet.transform.position = pos;
-        bullet.GetComponent<Bullet>().Init(velocity, lifeTime);
+        bullet.Init(velocity, lifeTime);
     }
 }

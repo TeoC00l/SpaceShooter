@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    [SerializeField] private float moveForce;
+    protected Rigidbody2D rb;
+    [SerializeField]
+    protected float moveForce;
     public GameObject target;
+    [SerializeField]
+    private float collisionDist = 1;
 
     [SerializeField] private LayerMask colideLayer;
 
@@ -37,7 +40,7 @@ public class Enemy : MonoBehaviour
     protected virtual bool CheckCollision(Vector2 dir)
     {
         Debug.DrawRay(transform.position, dir);
-        RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, dir, 3, colideLayer);
+        RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, dir, collisionDist, colideLayer);
 
         return hit.Any(hitObj => hitObj.transform.gameObject != gameObject);
     }

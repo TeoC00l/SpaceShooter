@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
 public class ObjectPooler : MonoBehaviour
@@ -7,7 +6,7 @@ public class ObjectPooler : MonoBehaviour
     public static ObjectPooler instance;
 
     public GameObject objectToPool;
-    public List<GameObject> pooledObjects = new List<GameObject>();
+    public List<Bullet> pooledObjects = new List<Bullet>();
     public int amountToPool;
 
     private void Awake()
@@ -21,15 +20,15 @@ public class ObjectPooler : MonoBehaviour
         {
             GameObject obj = Instantiate(objectToPool, transform);
             obj.SetActive(false);
-            pooledObjects.Add(obj);
+            pooledObjects.Add(obj.GetComponent<Bullet>());
         }
     }
 
-    public GameObject GetPooledObject()
+    public Bullet GetPooledObject()
     {
         for (int i = 0; i < pooledObjects.Count; i++)
         {
-            if (!pooledObjects[i].activeInHierarchy)
+            if (!pooledObjects[i].gameObject.activeInHierarchy)
             {
                 return pooledObjects[i];
             }

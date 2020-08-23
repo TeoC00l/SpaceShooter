@@ -1,14 +1,11 @@
-﻿
-using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
     [SerializeField]
     private float fireRate = 0.1f;
     private float fireRateTimer;
-    [SerializeField]
-    private ShipGunBase gun;
+    public ShipGunBase gun;
     [SerializeField]
     private Vector2 gunOffset;
     
