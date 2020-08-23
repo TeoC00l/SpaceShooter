@@ -14,6 +14,9 @@ public class UIController : MonoBehaviour
     private Button optionsButton;
 
     [SerializeField]
+    private GameObject optionMenu;
+
+    [SerializeField]
     private Transform heli;
     [SerializeField]
     private float heliMoveSpeed = 1;
@@ -31,6 +34,8 @@ public class UIController : MonoBehaviour
     {
         startButton.onClick.AddListener(StartGame);
         quitButton.onClick.AddListener(QuitGame);
+        optionsButton.onClick.AddListener(ShowOnOptionMenu);
+        
         waitTime = new WaitForSeconds(timeBeforeGameStart);
     }
 
@@ -38,6 +43,12 @@ public class UIController : MonoBehaviour
     {
         startGame = true;
         StartCoroutine(StartGameDelayed());
+    }
+
+    private void ShowOnOptionMenu()
+    {
+        optionMenu.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     private static void QuitGame()
