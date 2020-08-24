@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 4254030172108149484}
   - component: {fileID: 1885754478444217226}
   - component: {fileID: -4007927436229939920}
+  - component: {fileID: 446843794}
   m_Layer: 0
   m_Name: PlayerHeli
   m_TagString: Player
@@ -351,6 +352,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &446843794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254030172818559949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c0811cc514623469bd2b7d1848e1ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8391830271861812752, guid: 92357b778b9e74945a06c6ef0a10d01f, type: 3}
+  audioMixer: {fileID: 24100000, guid: 2e7dddcb1f505b248a6959079a42ccf4, type: 2}
 --- !u!1 &4254030173624070489
 GameObject:
   m_ObjectHideFlags: 0
