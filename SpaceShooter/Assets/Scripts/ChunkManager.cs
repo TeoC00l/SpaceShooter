@@ -1,23 +1,18 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
-//TODO: is activeChunks Needed?
 public class ChunkManager : MonoBehaviour
 {
     private int nodeSpawnPercentChance = 50;
-    [SerializeField] private float chunkSpeed = 10;
     private Vector2 startPosition = new Vector2(70f, 0f);
+
+    [SerializeField] private float chunkSpeed = 10;
     public float ChunkSpeed {set { chunkSpeed = value; } get { return chunkSpeed;  } }
     
     [SerializeField] private GameObject[] chunks;
     [SerializeField] private GameObject[] spawnObjects;
 
     private Random random = new Random();
-    private List<GameObject> activeChunks = new List<GameObject>();
     private GameObject lastChunk;
 
 
@@ -39,14 +34,12 @@ public class ChunkManager : MonoBehaviour
             chunk.transform.position = CalculateSpawnPoint();
 
         }
-        activeChunks.Add(chunk);
         lastChunk = chunk;
         InitializeNodes();
     }
 
     public void RemoveChunk(GameObject chunk)
     {
-        activeChunks.Remove(chunk);
         Destroy(chunk);
     }
 
@@ -60,7 +53,6 @@ public class ChunkManager : MonoBehaviour
 
     private void InitializeNodes()
     {
-        //TODO: Object pool?
 
         GameObject[] nodes = lastChunk.GetComponent<Chunk>().nodes;
 
@@ -73,8 +65,4 @@ public class ChunkManager : MonoBehaviour
             }
         }
     }
-
-
-
-    
 }
