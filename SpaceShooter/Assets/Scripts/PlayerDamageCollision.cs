@@ -2,6 +2,7 @@
 using Unity.Mathematics;
 using UnityEngine;
 using  UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class PlayerDamageCollision : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class PlayerDamageCollision : MonoBehaviour
     [SerializeField]
     private GameObject explosionPrefab;
     [SerializeField]
-    private AudioSource audioSource;
+    private AudioMixer audioMixer;
+
+    private bool exploded;
+    
 
     private void Awake()
     {
@@ -26,14 +30,26 @@ public class PlayerDamageCollision : MonoBehaviour
         }
         else 
         {
-            gameObject.SetActive(false);
-            Instantiate(explosionPrefab, transform.position, quaternion.identity);
-            EndGame();
+            if (!exploded)
+            {
+                Instantiate(explosionPrefab, transform.position, quaternion.identity);
+                StartCoroutine(EndGame());
+            }
         }
     }
 
     private IEnumerator EndGame()
     {
+        exploded = true;
         GameManager.instance.SaveScore();
+        for (float i = 1; i > 0; i -= 0.001f)
+        {
+            audioMixer.SetFloat("MusicPitch", i);
+            Time.timeScale = i;
+            yield return new WaitForEndOfFrame();
+        }
+
+        SceneManager.LoadScene("Menu");
+        gameObject.SetActive(false);
     }
 }
