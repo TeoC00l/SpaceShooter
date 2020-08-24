@@ -42,6 +42,7 @@ public class PlayerDamageCollision : MonoBehaviour
     {
         exploded = true;
         GameManager.instance.SaveScore();
+        GameManager.instance.DisplayScore();
         for (float i = 1; i > 0; i -= 0.001f)
         {
             audioMixer.SetFloat("MusicPitch", i);

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using  UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,6 +8,11 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     private ChunkManager chunkManager;
 
+    [SerializeField]
+    private Text highScoreText;
+    [SerializeField]
+    private Text scoreText;
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -38,5 +44,13 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("MaxScore", score);
         }
+    }
+
+    public void DisplayScore()
+    {
+        scoreText.gameObject.SetActive(true);
+        highScoreText.gameObject.SetActive(true);
+        scoreText.text = "High-Score: " + score.ToString();
+        highScoreText.text = "Score: " + PlayerPrefs.GetInt("MaxScore").ToString();
     }
 }
