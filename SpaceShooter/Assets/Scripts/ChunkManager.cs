@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
-//TODO: is activeChunks Needed?
 public class ChunkManager : MonoBehaviour
 {
     private int nodeSpawnPercentChance = 50;
@@ -15,7 +13,6 @@ public class ChunkManager : MonoBehaviour
     [SerializeField] private GameObject[] spawnObjects;
 
     private Random random = new Random();
-    private List<GameObject> activeChunks = new List<GameObject>();
     private GameObject lastChunk;
 
 
@@ -37,14 +34,12 @@ public class ChunkManager : MonoBehaviour
             chunk.transform.position = CalculateSpawnPoint();
 
         }
-        activeChunks.Add(chunk);
         lastChunk = chunk;
         InitializeNodes();
     }
 
     public void RemoveChunk(GameObject chunk)
     {
-        activeChunks.Remove(chunk);
         Destroy(chunk);
     }
 

@@ -2,9 +2,9 @@
 
 public class Parallax : MonoBehaviour
 {
-    private float marginal = 0.01f;
     private float size;
-    public float parallaxEffect;
+    [SerializeField] private float marginal = 0.01f;
+    [SerializeField] private float parallaxEffect;
 
     void Start()
     {
@@ -26,7 +26,7 @@ public class Parallax : MonoBehaviour
     {
         if (other.CompareTag("MainCamera"))
         {
-            Vector3 offset = transform.right * (size - 0.01f);
+            Vector3 offset = transform.right * (size - marginal);
             Vector3 pos = transform.position + offset;
             GameObject go = Instantiate(gameObject);
             go.transform.position = pos;
