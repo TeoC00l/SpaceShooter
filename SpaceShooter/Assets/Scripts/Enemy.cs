@@ -16,8 +16,11 @@ public class Enemy : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        Vector2 dir = (target.transform.position - transform.position).normalized;
-        Move(dir);
+        if (target)
+        {
+            Vector2 dir = (target.transform.position - transform.position).normalized;
+            Move(dir);
+        }
     }
 
     private void Awake()

@@ -31,4 +31,12 @@ public class GameManager : MonoBehaviour
             chunkManager.ChunkSpeed += 1;
         }
     }
+
+    public void SaveScore()
+    {
+        if (PlayerPrefs.GetInt("MaxScore") < score)
+        {
+            PlayerPrefs.SetInt("MaxScore", score);
+        }
+    }
 }
