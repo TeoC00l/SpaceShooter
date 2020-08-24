@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,8 +6,9 @@ using Random = UnityEngine.Random;
 public class ChunkManager : MonoBehaviour
 {
     private int nodeSpawnPercentChance = 50;
-    [SerializeField] private float chunkSpeed = 10;
     private Vector2 startPosition = new Vector2(70f, 0f);
+
+    [SerializeField] private float chunkSpeed = 10;
     public float ChunkSpeed {set { chunkSpeed = value; } get { return chunkSpeed;  } }
     
     [SerializeField] private GameObject[] chunks;
@@ -60,7 +58,6 @@ public class ChunkManager : MonoBehaviour
 
     private void InitializeNodes()
     {
-        //TODO: Object pool?
 
         GameObject[] nodes = lastChunk.GetComponent<Chunk>().nodes;
 
@@ -73,8 +70,4 @@ public class ChunkManager : MonoBehaviour
             }
         }
     }
-
-
-
-    
 }
